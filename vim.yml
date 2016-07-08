@@ -12,5 +12,6 @@
 
     - file: path=~/.vim/spell state=directory
 
-    - command: vim -i NONE -c PluginUpdate -c quitall
+    - command: vim +PluginInstall +qall
+    #vim -i NONE -c PluginUpdate -c quitall
     # FIXME: compile https://github.com/Shougo/vimproc.vim

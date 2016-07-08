@@ -37,22 +37,22 @@ Plugin 'ervandew/supertab'
 " Plugin 'jpalardy/vim-slime'
 " Plugin 'Matt-Deacalion/vim-systemd-syntax'
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'fatih/vim-go'
+"Plugin 'fatih/vim-go'
 Plugin 'jimenezrick/vimerl'
 Plugin 'wting/rust.vim'
 " Plugin 'cespare/vim-toml'
 " Plugin 'facebook/vim-flow'
-Plugin '2072/PHP-Indenting-for-VIm'
-Plugin 'shawncplus/phpcomplete.vim'
+"Plugin '2072/PHP-Indenting-for-VIm'
+"Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'joonty/vdebug.git'
 Plugin 'rhysd/vim-clang-format'
 Plugin 'tpope/vim-ragtag'
 Plugin 'zah/nimrod.vim'
-Plugin 'rgrinberg/vim-ocaml'
+"Plugin 'rgrinberg/vim-ocaml'
 
 " Plugin 'eagletmt/ghcmod-vim'
-Plugin 'eagletmt/ghcmod-vim'
-Plugin 'neovimhaskell/haskell-vim'
+"Plugin 'eagletmt/ghcmod-vim'
+"Plugin 'neovimhaskell/haskell-vim'
 
 Plugin 'elzr/vim-json'
 " Plugin 'vim-scripts/JavaScript-Indent'
@@ -74,9 +74,9 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-git'
 
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-bundler'
+"Plugin 'vim-ruby/vim-ruby'
+"Plugin 'tpope/vim-rails'
+"Plugin 'tpope/vim-bundler'
 
 Plugin 'tpope/vim-endwise'
 Plugin 'Shougo/vimshell.vim'
@@ -94,6 +94,9 @@ Plugin 'stephpy/vim-yaml'
 
 Plugin 'chrisbra/csv.vim'
 Plugin 'ekalinin/Dockerfile.vim'
+
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'klen/python-mode'            " Python mode (docs, refactor, lints,
 
 call vundle#end()
 filetype plugin indent on
@@ -216,18 +219,18 @@ let g:buffergator_sort_regime = "mru"
 
 let g:vim_markdown_folding_disabled = 1
 
-let g:syntastic_haskell_checkers = ['']
+"let g:syntastic_haskell_checkers = ['']
 
 let g:syntastic_javascript_checkers = ['eslint', 'flow']
 let g:syntastic_javascript_flow_exe = 'flow'
 
 let g:syntastic_haml_checkers = ['haml_lint']
-let g:syntastic_ruby_checkers = ['rubocop', 'mri']
-let g:syntastic_erlang_checkers = ['syntaxerl', 'escript']
+"let g:syntastic_ruby_checkers = ['rubocop', 'mri']
+"let g:syntastic_erlang_checkers = ['syntaxerl', 'escript']
 
-let g:syntastic_php_checkers=['phpcs', 'php']
-let g:syntastic_php_phpcs_exec='~/.composer/vendor/bin/phpcs'
-let g:syntastic_php_phpcs_args='--standard=PSR2 -n'
+"let g:syntastic_php_checkers=['phpcs', 'php']
+"let g:syntastic_php_phpcs_exec='~/.composer/vendor/bin/phpcs'
+"let g:syntastic_php_phpcs_args='--standard=PSR2 -n'
 
 " imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 " smap <C-k>     <Plug>(neosnippet_expand_or_jump)
@@ -292,6 +295,16 @@ au BufRead,BufNewFile {Vagrantfile,Gemfile,Capfile} set ft=ruby
 " autocmd Filetype html setlocal ts=2 sw=2
 autocmd Filetype php setlocal ts=4 sw=4 autoindent
 autocmd Filetype php setlocal ts=4 sw=4 autoindent
+map <F2> :NERDTreeToggle<CR>
+map <F3> :TaskList<CR>     " отобразить список тасков на F2
+" toggle tagbar display
+ map <F4> :TagbarToggle<CR>
+ " " autofocus on tagbar open
+ let g:tagbar_autofocus = 1
+ map <tab> :tabprevious<C-M>
+ map <tab><e> :tabnext<C-M>
+"
+ map <F6> :tabnew<cr>
 
 if filereadable(expand("~/.vimrc.after"))
   source ~/.vimrc.after
