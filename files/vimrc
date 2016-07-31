@@ -97,6 +97,8 @@ Plugin 'ekalinin/Dockerfile.vim'
 
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'klen/python-mode'            " Python mode (docs, refactor, lints,
+Plugin 'hynek/vim-python-pep8-indent'
+
 
 call vundle#end()
 filetype plugin indent on
@@ -151,8 +153,8 @@ set autoindent
 " set softtabstop=4
 set expandtab
 " set noexpandtab
-set softtabstop=2
-set shiftwidth=2
+set softtabstop=4
+set shiftwidth=4
 " set smarttab
 
 " set background=dark
