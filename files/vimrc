@@ -1,6 +1,6 @@
 set nocompatible
 filetype off
-
+"Проверка
 let $PATH = $PATH . ':' . expand("~/.local/bin")
 
 set rtp+=~/.vim/bundle/Vundle.vim
